@@ -5,6 +5,9 @@ const app = express();
 // requiring express.ejs layouts
 const expressLayouts = require("express-ejs-layouts")
 
+//connecting to our database
+const db = require("./config/mongoose");
+
 app.use(express.static("./assets"));
 
 // using layout before route
