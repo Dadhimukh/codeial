@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+
+    <!-- importing css file from assets folder -->
+    <link rel="stylesheet" href="/css/layout.css">
+
 </head>
 <body>
 
     <%-include("_header")-%>
 
-    <%- body -%>      <!-- not need to include , it's predefine from liberary from express.ejs.layoute -->
+    <%- body -%>      <!-- no need to include , it's predefine from liberary from express.ejs.layoute -->
 
     <%-include("_footer")-%>
 

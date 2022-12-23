@@ -5,6 +5,8 @@ const app = express();
 // requiring express.ejs layouts
 const expressLayouts = require("express-ejs-layouts")
 
+app.use(express.static("./assets"));
+
 // using layout before route
 app.use(expressLayouts);
 
