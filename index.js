@@ -10,6 +10,10 @@ app.use(express.static("./assets"));
 // using layout before route
 app.use(expressLayouts);
 
+//extract style and scrpt from subpages into the layout  
+app.set("layout extractStyles" , true);
+app.set("layout extractScripts" , true);
+
 // use express router
 app.use('/',require('./routes'));
 
