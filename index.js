@@ -2,6 +2,12 @@
 const express = require('express');
 const app = express();
 
+// requiring express.ejs layouts
+const expressLayouts = require("express-ejs-layouts")
+
+// using layout before route
+app.use(expressLayouts);
+
 // use express router
 app.use('/',require('./routes'));
 
