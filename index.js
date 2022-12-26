@@ -1,5 +1,8 @@
 
 const express = require('express');
+
+// requiring cookieParser
+const cookieParser = require("cookie-parser");
 const app = express();
 
 // requiring express.ejs layouts
@@ -7,6 +10,11 @@ const expressLayouts = require("express-ejs-layouts")
 
 //connecting to our database
 const db = require("./config/mongoose");
+
+// middleWare
+app.use(express.urlencoded());
+
+app.use(cookieParser());
 
 app.use(express.static("./assets"));
 
