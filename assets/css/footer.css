@@ -1,0 +1,19 @@
+footer {
+  background-color: #5c5c5c;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between; }
+  footer p {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: aliceblue; }
+  footer #btns {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em; }
+    footer #btns a {
+      padding: 20px;
+      color: black;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold; }

@@ -1,0 +1,15 @@
+header {
+  background-color: #0077ff;
+  display: flex;
+  justify-content: space-between; }
+  header h1 {
+    color: aliceblue;
+    margin: 0;
+    padding: 0; }
+  header ul {
+    list-style: none;
+    display: flex; }
+  header li a {
+    color: aliceblue;
+    padding: 1em;
+    text-decoration: none; }

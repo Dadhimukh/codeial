@@ -8,6 +8,8 @@
 
     <!-- importing css file from assets folder -->
     <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
 
     <%- style %>
 
@@ -16,7 +18,11 @@
 
     <%-include("_header")-%>
 
-    <%- body -%>      <!-- no need to include , it's predefine from liberary from express.ejs.layoute -->
+    <main id="layout-main">
+        
+        <%- body -%>      <!-- no need to include , it's predefine from liberary from express.ejs.layoute -->
+
+    </main>
 
     <%-include("_footer")-%>
 

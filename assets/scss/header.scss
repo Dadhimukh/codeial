@@ -1,0 +1,22 @@
+header{
+    background-color: #0077ff;
+    display: flex;
+    justify-content: space-between;
+
+    h1{
+        color: aliceblue;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+    }
+
+    li a{
+        color: aliceblue;
+        padding: 1em;
+        text-decoration: none;
+    }
+}
