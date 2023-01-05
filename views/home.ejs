@@ -12,7 +12,17 @@
       <ul>
 
             <% for(post of posts){ %>
-                  <li><%= post.content %></li>
+                  <li>
+                        <p>
+                              <%= post.content %>
+                              <br>
+                              <small>
+                                    <%= post.user.name %>  
+      
+                              </small>
+      
+                        </p>
+                  </li>
             <% } %>
       </ul>
    </div>
