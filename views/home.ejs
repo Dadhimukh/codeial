@@ -1,35 +1,52 @@
 <h1>Codeial home page</h1>
 
 <section id="feed-posts">
-   <h4>Posts</h4>
+  <h4>Posts</h4>
 
-   <% if (locals.user) {%>
+  <% if (locals.user) {%>
 
-   <form action="/posts/create" id="new-post-form" method="POST">
-         <textarea name="content" id="" cols="30" rows="3" placeholder="Type Here..."></textarea>
+  <form action="/posts/create" id="new-post-form" method="POST">
+    <textarea
+      name="content"
+      id=""
+      cols="30"
+      rows="3"
+      placeholder="Type Here..."
+    ></textarea>
 
-         <input type="submit" value="Post">
-   </form>
+    <input type="submit" value="Post" />
+  </form>
 
-   <% } %>
+  <% } %>
 
-   <div id="posts-list-container">
-      <ul>
+  <div id="posts-list-container">
+    <ul>
+      <% for(post of posts){ %>
+      <li>
+        <p>
+          <%= post.content %>
+          <br />
+          <small> <%= post.user.name %> </small>
+        </p>
 
-            <% for(post of posts){ %>
-                  <li>
-                        <p>
-                              <%= post.content %>
-                              <br>
-                              <small>
-                                    <%= post.user.name %>  
-      
-                              </small>
-      
-                        </p>
-                  </li>
-            <% } %>
-      </ul>
-   </div>
+        <div class="post-comments">
+          <% if (locals.user) { %>
 
+          <form action="/comments/create" method="POST">
+            <input
+              type="text"
+              name="content"
+              placeholder="Type Here To add comment...."
+            />
+
+            <input type="hidden" name="post" value="<%= post._id %>" />
+
+            <input type="submit" value="Add Comment" />
+          </form>
+          <% } %>
+        </div>
+      </li>
+      <% } %>
+    </ul>
+  </div>
 </section>
