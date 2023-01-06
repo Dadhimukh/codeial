@@ -25,6 +25,11 @@
       <% for(post of posts){ %>
       <li>
         <p>
+          <small>
+            <% if (locals.user && locals.user.id == post.user.id) { %>
+            <a href="/posts/destroy/<%= post.id %>">Delete</a>
+          </small>
+          <% } %>
           <%= post.content %>
           <br />
           <small> <%= post.user.name %> </small>
