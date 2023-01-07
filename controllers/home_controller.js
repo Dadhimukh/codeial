@@ -24,7 +24,7 @@ module.exports.home = async function (req, res) {
         all_users: users
     });
 
-}catch{
+}catch(err){
     console.log("Error", err);
     return;
 }
