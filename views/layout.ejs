@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+    <title>
+        <%= title %>
+    </title>
+
+    <!-- cdn of noty min.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <!-- cdn of noty script min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+
 
     <!-- importing css file from assets folder -->
     <link rel="stylesheet" href="/css/layout.css">
@@ -14,26 +23,54 @@
     <%- style %>
 
 </head>
+
 <body>
 
     <%-include("_header")-%>
 
-    <!-- showing flash msg to user -->
+        <!-- showing flash msg to user
     <% if(flash.success && flash.success.length > 0) { %>
          <H5>
             <%= flash.success %>
          </H5>
-    <% } %>    
+    <% } %>     -->
 
-    <main id="layout-main">
-        
-        <%- body -%>      <!-- no need to include , it's predefine from liberary from express.ejs.layoute -->
+        <main id="layout-main">
 
-    </main>
+            <%- body -%> <!-- no need to include , it's predefine from liberary from express.ejs.layoute -->
 
-    <%-include("_footer")-%>
+        </main>
+
+        <%-include("_footer")-%>
 
 
-    <%- script %>
+            <%- script %>
+
+
+                <script>
+        <% if (flash.success && flash.success.length > 0) { %>
+                        new Noty({
+                            theam: "relax",
+                            text: '<%= flash.success %>',
+                            type: "success",
+                            layout: "topRight",
+                            timeout: 2000
+                        }).show();
+        <% } %>   
+
+        <% if (flash.error && flash.error.length > 0) { %>
+                        new Noty({
+                            theam: "relax",
+                            text: '<%= flash.success %>',
+                            type: "error",
+                            layout: "topRight",
+                            timeout: 2000
+                        }).show();
+        <% } %>
+
+                </script>
+
+
 </body>
+
 </html>
