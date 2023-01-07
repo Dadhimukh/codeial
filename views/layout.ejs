@@ -18,6 +18,13 @@
 
     <%-include("_header")-%>
 
+    <!-- showing flash msg to user -->
+    <% if(flash.success && flash.success.length > 0) { %>
+         <H5>
+            <%= flash.success %>
+         </H5>
+    <% } %>    
+
     <main id="layout-main">
         
         <%- body -%>      <!-- no need to include , it's predefine from liberary from express.ejs.layoute -->
