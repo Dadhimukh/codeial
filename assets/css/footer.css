@@ -1,8 +1,11 @@
 footer {
   background-color: #5c5c5c;
   height: 10vh;
+  width: 100%;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0; }
   footer p {
     font-weight: bold;
     font-size: 1.5em;

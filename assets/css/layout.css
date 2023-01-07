@@ -1,4 +1,8 @@
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: rgb(218, 240, 240);
+ }
   body #layout-main {
+    margin-top: 8vh;
+    margin-bottom: 8vh;
     height: 79vh; }
