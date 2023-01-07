@@ -84,9 +84,12 @@ module.exports.destroySession = function (req, res) {
         if (err) {
             console.log('Error');
         }
+        req.flash('success', 'You have Logged out');
+        return res.redirect("/");
+
     });
 
-    req.flash('success', 'You have Logged out');
-    return res.redirect("/");
+    // req.flash('success', 'You have Logged out');
+    // return res.redirect("/");
 
 }
