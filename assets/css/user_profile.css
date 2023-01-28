@@ -1,3 +1,8 @@
 body {
   background: rebeccapurple;
-  color: antiquewhite; }
+  color: antiquewhite; 
+}
+
+#avatar_image img {
+  border-radius: 50%;
+}
