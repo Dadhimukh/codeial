@@ -128,4 +128,6 @@ module.exports.destroySession = function (req, res) {
     // req.flash('success', 'You have Logged out');
     // return res.redirect("/");
 
+
+
 }
